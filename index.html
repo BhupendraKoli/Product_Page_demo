@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Semi Automatic Disc Filter | Your Brand</title>
+    <meta name="description"
+        content="Explore product features, size variants, specifications, delivery, price and customer reviews.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://example.com/products/semi-automatic-disc-filter">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json" id="productSchema">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": "https://example.com/products/semi-automatic-disc-filter#product",
+    "name": "Semi Automatic Disc Filter",
+    "url": "https://example.com/products/semi-automatic-disc-filter",
+    "description": "Sample product description. Replace with verified product information.",
+    "image": [
+      "https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sku": "WP-001",
+    "brand": {
+      "@type": "Brand",
+      "name": "Your Brand"
+    },
+    "category": "Agricultural Equipment",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://example.com/products/water-pump",
+      "priceCurrency": "INR",
+      "price": "4999",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition",
+      "seller": {
+        "@type": "Organization",
+        "name": "Your Store"
+      },
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "INR"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "IN"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": 2,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 3,
+            "maxValue": 7,
+            "unitCode": "DAY"
+          }
+        }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "IN",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 7,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/FreeReturn"
+      }
+    }
+  }
+  </script>
+</head>
+
+<body>
+    <header class="topbar">
+        <a class="logo" href="#">Heera<span>Agro</span></a>
+
+        <form class="search-box" id="searchForm">
+            <input id="searchInput" type="search" placeholder="Search products..." aria-label="Search products">
+            <button type="submit">Search</button>
+        </form>
+
+        <button class="cart-button" id="cartButton" type="button">
+            🛒 Cart <span id="cartCount">0</span>
+        </button>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="#">Home</a> / <a href="#">Agriculture</a> / Filter
+    </nav>
+
+    <main class="container">
+        <section class="product-layout" id="product">
+            <div class="gallery">
+                <div class="main-image">
+                    <img id="mainImage" src="Disc.jpg" alt="Semi Automatic Disc Filter">
+                </div>
+                <div class="thumbnails" id="thumbnails">
+                    <button class="thumb active" type="button" data-image="Disc.jpg">
+                        <img src="Disc.jpg" alt="Product view 1">
+                    </button>
+                    <button class="thumb" type="button" data-image="Disc.jpg">
+                        <img src="Disc.jpg" alt="Product view 2">
+                    </button>
+                    <button class="thumb" type="button" data-image="Disc.jpg">
+                        <img src="Disc.jpg" alt="Product view 3">
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-info">
+                <span class="category-label">AGRICULTURAL EQUIPMENT</span>
+                <h1 id="productName">Semi Automatic Disc Filter</h1>
+
+                <p class="brand-line">
+                    Brand: <strong id="brandName">Heera Agro Industries</strong>
+                    <!-- <span id="sku">SKU: WP-001</span> -->
+                </p>
+
+                <div class="rating-line">
+                    <span class="rating-badge">★ 4.5</span>
+                    <a href="#reviews" class="review-link">Customer reviews</a>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="price-line">
+                    <span class="price" id="price">₹4,500</span>
+                    <!-- <span class="old-price" id="oldPrice">₹6,100</span> -->
+                    <!-- <span class="discount" id="discount">23% off</span> -->
+                </div>
+                <!-- <p class="muted small">Sample prices — replace with actual selling prices.</p> -->
+
+                <div class="offer-card">
+                    <strong>Available offers</strong>
+                    <p>✓ Check current offers before ordering</p>
+                    <p>✓ Secure payment options as supported by the store</p>
+                    <p>✓ Contact us for bulk order information</p>
+                </div>
+
+                <div class="variant-section">
+                    <h3>Choose size / model</h3>
+                    <div id="variantOptions" class="variant-options"></div>
+                    <p class="muted small" id="variantInfo">Select a product variant.</p>
+                </div>
+
+                <!-- <div class="variant-section">
+          <h3>Choose colour</h3>
+          <div id="colorOptions" class="color-options"></div>
+        </div> -->
+
+                <div class="delivery-card">
+                    <h3>🚚 Delivery across India</h3>
+                    <p>Enter your PIN code to check delivery information.</p>
+                    <div class="pincode-row">
+                        <input id="pincode" type="text" inputmode="numeric" maxlength="6" placeholder="6-digit PIN code"
+                            aria-label="Delivery PIN code">
+                        <button type="button" id="checkDelivery">Check</button>
+                    </div>
+                    <p id="deliveryMessage" class="delivery-message" aria-live="polite">
+                        Delivery availability is subject to courier serviceability.
+                    </p>
+                    <p class="muted small">Estimated delivery: 3–7 business days (demo).</p>
+                </div>
+
+                <div class="quantity-row">
+                    <label for="quantity">Quantity</label>
+                    <button type="button" id="minusQty" aria-label="Decrease quantity">−</button>
+                    <input id="quantity" type="number" min="1" max="99" value="1">
+                    <button type="button" id="plusQty" aria-label="Increase quantity">+</button>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="add-cart" id="addCart" type="button">🛒 ADD TO CART</button>
+                    <button class="buy-now" id="buyNow" type="button">BUY NOW</button>
+                </div>
+
+                <button type="button" class="share-button" id="shareButton">
+                    ↗ Share Product
+                </button>
+
+                <div class="trust-row">
+                    <span>🔒 Secure checkout</span>
+                    <span>📦 Shipping information</span>
+                    <span>↩ Return policy</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SHORT DESCRIPTION -->
+        <section class="details-section" id="description">
+            <h2>Product Description</h2>
+            <p id="shortDescription">
+                Semi Automatic Disc Filter is ISI certified product.
+                Semi Automatic Disc Filter is made with engineering plastic so it does not easily get rust.
+                Semi Automatic Disc Filter work on the process of flow passes outside from inside of Disc cartridge.
+                Semi Automatic Disc Filter uniform distribution of flow into filter housing optimizes the filtration
+                process.
+                Semi Automatic Disc Filter is designed for pressure rating PN8 (8bar).
+                Semi Automatic Disc Filter has 2 male threaded pressure port at the top for easy visibility of pressure.
+                Disc cartridge enabled with spring-loaded for full compression of the disc and loosen during cleaning.
+                Semi Automatic Disc Filter with clogging indicator, Red-colored pop up comes out at 0.6 kg/cm2 pressure
+                differential, indicated user to clean filter manually.
+            </p>
+
+            <div id="fullDescription" class="read-more-content" hidden>
+                <h3>About this product</h3>
+                <p>
+                    Semi Automatic Disc Filter leaning Instructions
+                    Cleaning of the filter must be done when the pressure differential across the disc filter reaches
+                    0.6 kg/cm2 (8.5psi) or when the clogging indicator red button pops up.
+                    Cleaning the Semi-Automatic Filter must be done while the filter is under pressure of water flow.
+                    Gradually open the flushing valve of the filter.
+                    To start the cleaning of the filter, turn the handle (top of the filter) 90 degrees in a clockwise
+                    direction.
+                    Cleaning operation starts, system pressure might increase during the cleaning operation.
+                    When the cleaning operation is done, the first filter handle direction should be at filtration mode.
+                    And then the flushing valve gradually close.
+                    In case the filter is still clogged (pressure indicator button is up.) Repeat the above steps for
+                    effective disc cleaning.
+                </p>
+                <h3>Before purchasing</h3>
+                <p>
+                    Check the technical specifications and confirm that the product
+                    is suitable for your application. Follow the manufacturer's
+                    installation and safety instructions.
+                </p>
+            </div>
+
+            <button type="button" id="readMoreBtn" class="text-button" aria-expanded="false"
+                aria-controls="fullDescription">
+                Read More ↓
+            </button>
+        </section>
+
+        <!-- TECHNICAL DETAILS -->
+        <section class="details-section" id="technical">
+            <h2>Technical Details</h2>
+            <p class="section-intro">
+                Technical specifications of the selected product.
+            </p>
+            <div class="table-wrap">
+                <table>
+                    <tbody id="technicalTable">
+                        <tr>
+                            <th>Product name</th>
+                            <td>Semi Automatic Disc Filter</td>
+                        </tr>
+                        <tr>
+                            <th>Brand</th>
+                            <td>Heera Agro Industries</td>
+                        </tr>
+                        <tr>
+                            <th>SKU</th>
+                            <td>DF-001</td>
+                        </tr>
+                        <tr>
+                            <th>Selected model</th>
+                            <td>Standard</td>
+                        </tr>
+                        <tr>
+                            <th>Selected colour</th>
+                            <td>Black</td>
+                        </tr>
+                        <tr>
+                            <th>Category</th>
+                            <td>Agricultural Equipment</td>
+                        </tr>
+                        <tr>
+                            <th>Condition</th>
+                            <td>New</td>
+                        </tr>
+                        <tr>
+                            <th>Warranty</th>
+                            <td>Confirm actual warranty</td>
+                        </tr>
+                        <tr>
+                            <th>Country of origin</th>
+                            <td>Confirm actual origin</td>
+                        </tr>
+                        <tr>
+                            <th>Package contents</th>
+                            <td>Confirm actual contents</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SHIPPING AND RETURNS -->
+        <section class="details-section" id="policies">
+            <h2>Shipping, Returns & Payment</h2>
+            <div class="policy-grid">
+                <article class="policy-card">
+                    <h3>🚚 Shipping</h3>
+                    <p>Shipping charges and delivery estimates depend on the actual store policy and delivery location.
+                    </p>
+                </article>
+                <article class="policy-card">
+                    <h3>↩ Returns</h3>
+                    <p>Check the seller's return window, eligible conditions, method and fees before purchasing.</p>
+                </article>
+                <article class="policy-card">
+                    <h3>💳 Payment</h3>
+                    <p>Available payment methods and refund terms must match the actual checkout system.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- REVIEWS -->
+        <section class="details-section" id="reviews">
+            <h2>Customer Reviews & Ratings</h2>
+            <div class="review-summary">
+                <div>
+                    <div class="big-rating">— <span>★</span></div>
+                    <p>Customer rating</p>
+                    <p class="muted">No verified reviews added yet.</p>
+                </div>
+                <div>
+                    <p>Customer reviews will appear here when available.</p>
+                    <p class="muted small">
+                        Only genuine reviews and calculated ratings should be published.
+                    </p>
+                </div>
+            </div>
+            <div id="reviewList"></div>
+        </section>
+
+        <!-- RELATED PRODUCTS LAST -->
+        <section class="details-section" id="related">
+            <h2>You May Also Like</h2>
+            <p class="section-intro">Explore more products you may be interested in.</p>
+
+            <div class="related-grid">
+                <article class="related-card">
+                    <a href="product-2.html">
+                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=500&q=80"
+                            alt="Related product one">
+                        <h3>Related Product One</h3>
+                    </a>
+                    <p class="related-price">₹2,499</p>
+                    <a class="related-link" href="product-2.html">View Product →</a>
+                </article>
+
+                <article class="related-card">
+                    <a href="product-3.html">
+                        <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=500&q=80"
+                            alt="Related product two">
+                        <h3>Related Product Two</h3>
+                    </a>
+                    <p class="related-price">₹3,999</p>
+                    <a class="related-link" href="product-3.html">View Product →</a>
+                </article>
+
+                <article class="related-card">
+                    <a href="product-4.html">
+                        <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=500&q=80"
+                            alt="Related product three">
+                        <h3>Related Product Three</h3>
+                    </a>
+                    <p class="related-price">₹5,499</p>
+                    <a class="related-link" href="product-4.html">View Product →</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Your Store. All rights reserved.</p>
+        <p>Contact Us · Privacy Policy · Terms · Shipping & Returns</p>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
